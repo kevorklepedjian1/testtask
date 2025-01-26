@@ -28,13 +28,13 @@ const App = () => {
 
   const toggleDropdown = (key) => {
     setDropdownStates((prev) => {
-      // Close all other dropdowns when opening a new one
+   
       const newStates = Object.keys(prev).reduce((acc, k) => {
         acc[k] = k === key ? !prev[k] : false;
         return acc;
       }, {});
       
-      // Ensure the clicked dropdown toggles
+    
       if (!prev[key]) {
         newStates[key] = true;
       }
